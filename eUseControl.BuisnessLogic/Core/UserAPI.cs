@@ -12,7 +12,8 @@ namespace eUseControl.BuisnessLogic.Core
     {
         internal ULoginResp RLoginUpService(ULoginData data)
         {
-            //Step 1 - SELECT FROM DB>Users WHERE CREDENTIAL == data.Creadential AND
+            //Step 1 - SELECT FROM DB>Users
+            //WHERE CREDENTIAL == data.Creadential AND
             //PASSWORD == data.Password
 
             //Step 2 - IF object != NULL 
