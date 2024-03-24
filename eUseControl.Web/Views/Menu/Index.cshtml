@@ -1,7 +1,216 @@
 ﻿
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
     ViewBag.Title = "Menu";
 }
 
 @model eUseControl.Web.Models.Product
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <!-- Link către fișierul CSS -->
+    <link rel="stylesheet" type="text/css" href="/Content/stylemenu.css">
+</head>
+<body>
+
+
+    <section class="section menu" aria-label="menu-label" id="menu">
+        <div class="container">
+
+            <p class="section-subtitle text-center label-2">Sélection spéciale</p>
+
+            <h2 class="headline-1 section-title text-center">Menu délicieux</h2>
+
+            <ul class="grid-list">
+
+                <li>
+                    <div class="menu-card hover:card">
+
+                        <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                            <img src="~/Images/Menu/menu-1.png" width="100" height="100" loading="lazy" alt="Greek Salad"
+                                 class="img-cover">
+                        </figure>
+
+                        <div>
+
+                            <div class="title-wrapper">
+                                <h3 class="title-3">
+                                    <a href="#" class="card-title">Poulet au curry</a>
+                                </h3>
+
+                                <span class="badge label-1">Saisonnier</span>
+
+                                <span class="span title-2">$25.50</span>
+                            </div>
+
+                            <p class="card-text label-1">
+                                Poulet, huile, oignon, ail, gingembre, poivron rouge, tomates, lait de coco, curry.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="menu-card hover:card">
+
+                        <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                            <img src="/Images/Menu/menu-2.png" width="100" height="100" loading="lazy" alt="Lasagne"
+                                 class="img-cover">
+                        </figure>
+
+                        <div>
+
+                            <div class="title-wrapper">
+                                <h3 class="title-3">
+                                    <a href="#" class="card-title">Udon aux champignons</a>
+                                </h3>
+
+                                <span class="span title-2">$40.00</span>
+                            </div>
+
+                            <p class="card-text label-1">
+                                Udon, champignons, sauce soja, bouillon de légumes, poireau, carottes, gingembre, ail, huile de sésame, oignon vert, graines de sésame.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="menu-card hover:card">
+
+                        <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                            <img src="/Images/Menu/menu-3.png" width="100" height="100" loading="lazy" alt="Butternut Pumpkin"
+                                 class="img-cover">
+                        </figure>
+
+                        <div>
+
+                            <div class="title-wrapper">
+                                <h3 class="title-3">
+                                    <a href="#" class="card-title">Biryani</a>
+                                </h3>
+
+                                <span class="span title-2">$10.00</span>
+                            </div>
+
+                            <p class="card-text label-1">
+                                Riz, viande, oignon, ail, gingembre, tomates, yaourt, épices, feuilles de menthe et coriandre, lait de coco.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="menu-card hover:card">
+
+                        <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                            <img src="/Images/Menu/menu-4.png" width="100" height="100" loading="lazy" alt="Tokusen Wagyu"
+                                 class="img-cover">
+                        </figure>
+
+                        <div>
+
+                            <div class="title-wrapper">
+                                <h3 class="title-3">
+                                    <a href="#" class="card-title">Lasagne</a>
+                                </h3>
+
+                                <span class="badge label-1">New</span>
+
+                                <span class="span title-2">$39.00</span>
+                            </div>
+
+                            <p class="card-text label-1">
+                                Pâine, viande hachée, sauce tomate, fromage ricotta, mozzarella, parmesan, oignon, ail, carotte, basilic.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="menu-card hover:card">
+
+                        <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                            <img src="/Images/Menu/menu-5.png" width="100" height="100" loading="lazy" alt="Olivas Rellenas"
+                                 class="img-cover">
+                        </figure>
+
+                        <div>
+
+                            <div class="title-wrapper">
+                                <h3 class="title-3">
+                                    <a href="#" class="card-title">Tokusen Wagyu</a>
+                                </h3>
+
+                                <span class="span title-2">$25.00</span>
+                            </div>
+
+                            <p class="card-text label-1">
+                                Viande de bœuf tokusen wagyu, riz, sauce soja, huile de sésame, ail, oignon vert, gingembre, mirin, sucre, sel, poivre.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="menu-card hover:card">
+
+                        <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                            <img src="/Images/Menu/menu-6.png" width="100" height="100" loading="lazy" alt="Opu Fish"
+                                 class="img-cover">
+                        </figure>
+
+                        <div>
+
+                            <div class="title-wrapper">
+                                <h3 class="title-3">
+                                    <a href="#" class="card-title">Risotto aux crevettes</a>
+                                </h3>
+
+                                <span class="span title-2">$49.00</span>
+                            </div>
+
+                            <p class="card-text label-1">
+                                Riz Arborio, crevettes, oignon, ail, vin blanc, bouillon de légumes, beurre, parmesan, basilic.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <p class="menu-text text-center">
+                Le week-end de <span class="span">9h00</span> à <span class="span">15h00</span>
+            </p>
+
+            <a href="#" class="btn btn-primary">
+                <span class="text text-1">Voir tout le menu</span>
+
+                <span class="text text-2" aria-hidden="true">Voir tout le menu</span>
+            </a>
+
+            <img src="/Images/Menu/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
+                 class="shape shape-2 move-anim">
+            <img src="/Images/Menu/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
+                 class="shape shape-3 move-anim">
+
+        </div>
+    </section>
+    </body>
+</html>

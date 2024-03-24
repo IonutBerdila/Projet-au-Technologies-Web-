@@ -26,6 +26,7 @@ namespace eUseControl.Web.Controllers
             return View();
         }
 
+
         //Post: Login
         [HttpPost]
         public ActionResult Index(UserLogin data)

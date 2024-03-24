@@ -1,93 +1,63 @@
-﻿@model eUseControl.Web.Models.User.UserLogin
-
+﻿
 @{
     Layout = null;
     ViewBag.Title = "Login";
 }
 
-<link rel='stylesheet' href='/Content/lStyle.css'>
-<link rel='stylesheet' href='/Content/style.css'>
-@System.Web.Optimization.Styles.Render("~/Content/css")
+@model eUseControl.Web.Models.User.UserLogin
 
+<html>
+<head>
+    <title>Login Registration Form</title>
+    <link rel="stylesheet" href="/Content/stylelogin.css">
 
-<div class='header-line'>
-    <div class='header-logo'>
-        <img src="~/Images/logo.png" alt="">
-
-    </div>
-
-    <div class="nav">
-        <a class='nav-item' href="/Home">ACASĂ</a>
-        <a class='nav-item' href="/Menu">MENIU</a>
-        <a class='nav-item' href="#">DESPRE NOI</a>
-        <a class='nav-item' href="#">BRONARE</a>
-    </div>
-    <div class='phone'>
-        <div class='phone-holder'>
-
-            <div class='phone-img'>
-                <img src="~/Images/phone.png" alt="">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()"> Log In </button>
+                <button type="button" class="toggle-btn" onclick="register()">Register </button>
             </div>
-
-            <div class='number'><a class='num' href='#'>+0798-94-700</a></div>
-        </div>
-
-        <div class='phone-text'>
-            Sunați pentru <br> bronare
-        </div>
-
-    </div>
-</div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="login-form">
-                        @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @id = "LoginForm" }))
-                        {
-                            @Html.AntiForgeryToken()
-
-                            <div class="form-horizontal">
-                                @Html.ValidationSummary(true)
-
-                                <div class="form-group">
-
-                                    <div class="col-md-11">
-                                        @Html.LabelFor(model => model.Credential, new { @class = "control-label" })
-                                        @Html.TextBoxFor(model => model.Credential, new
-                                   {
-                                       @class = "form-control",
-                                       id = "username",
-                                       name = "username",
-                                       value = "",
-                                       title = "Please enter your username",
-                                   })
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-
-                                    <div class="col-md-11">
-                                        @Html.LabelFor(model => model.Password, new { @class = "control-label" })
-                                        @Html.TextBoxFor(model => model.Password, new
-                                   {
-                                       @class = "form-control",
-                                       id = "password",
-                                       name = "password",
-                                       value = "",
-                                       placeholder = "**********",
-                                       title = "Please enter your password",
-                                       type = "password"
-                                   })
-                                    </div>
-                                    <div>
-                                        <button class="btn btn-succes">Login</button>
-                                        <a class="btn btn-default" href="register.html">Register</a>
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                </div>
+            <div class="social-icons">
+                <img src="/Images/Login/fb.png">
+                <img src="/Images/Login/tw.png">
+                <img src="/Images/Login/gp.png">
             </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Name" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span>Memorează parola</span>
+                <button type="submit" class="submit-btn">Autorizare</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="Name" required>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span>Sunt de acord cu termenii și condițiile</span>
+                <button type="submit" class="submit-btn">Înregistrare</button>
+            </form>
         </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+
+
+
+</body>
+</html>
