@@ -23,6 +23,15 @@ namespace eUseControl.Web.Controllers
         // GET: Login
         public ActionResult Index()
         {
+            var uLoginData = new ULoginData
+            {
+                Credential = "user",
+                Password = "password",
+                Ip = "",
+                LoginTime = DateTime.Now
+            };
+            var test = _session.UserLoginAction(uLoginData);
+
             return View();
         }
 

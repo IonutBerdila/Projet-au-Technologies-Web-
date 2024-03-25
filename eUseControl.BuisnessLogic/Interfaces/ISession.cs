@@ -1,4 +1,5 @@
-﻿using eUseControl.Domain.Entities.Response;
+﻿
+using eUseControl.Domain.Entities.Response;
 using eUseControl.Domain.Entities.User;
 using System;
 using System.Collections.Generic;

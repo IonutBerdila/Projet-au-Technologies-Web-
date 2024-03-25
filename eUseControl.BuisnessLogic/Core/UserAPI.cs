@@ -1,5 +1,7 @@
-﻿using eUseControl.Domain.Entities.Response;
+﻿using eUseControl.BuisnessLogic.DBContext.User;
+using eUseControl.Domain.Entities.Response;
 using eUseControl.Domain.Entities.User;
+using eUseControl.Domain.Entities.User.DBModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,16 +14,22 @@ namespace eUseControl.BuisnessLogic.Core
     {
         internal ULoginResp RLoginUpService(ULoginData data)
         {
-            //Step 1 - SELECT FROM DB>Users
-            //WHERE CREDENTIAL == data.Creadential AND
-            //PASSWORD == data.Password
+            
 
-            //Step 2 - IF object != NULL 
-            //CREATE SESSION
+            using(var db = new UserContext())
+            {
+                var user = db.User.FirstOrDefault(u => u.UserName == data.Credential);
+            };
 
-            //RETURN SESSION AND STATUS TRUE
 
-            return new ULoginResp { Status = false };
+            return new ULoginResp
+            {
+                Status = false,
+                CurrentUser = new User
+                {
+                    UserName = "Cristi"  
+                }
+            };
         }
     }
 }
