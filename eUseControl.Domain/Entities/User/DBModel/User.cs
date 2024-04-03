@@ -26,9 +26,6 @@ namespace eUseControl.Domain.Entities.User.DBModel
         [StringLength(30, MinimumLength = 8)]
         public string Password { get; set; }
 
-        [Required]
-        public string UserName { get; set; }
-
         public UserRole Level { get; set; }
     }
 }

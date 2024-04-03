@@ -11,6 +11,7 @@ namespace eUseControl.BuisnessLogic.Interfaces
 {
     public interface ISession
     {
+        URegisterResp RegisterNewUserAction(URegisterData regData);
         ULoginResp UserLoginAction(ULoginData data);
     }
 }

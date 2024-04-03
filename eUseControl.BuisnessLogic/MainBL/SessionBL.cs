@@ -16,5 +16,10 @@ namespace eUseControl.BuisnessLogic.MainBL
         {
             return RLoginUpService(data);
         }
+
+        public URegisterResp RegisterNewUserAction(URegisterData regData)
+        {
+            return RegisterUserAction(regData);
+        }
     }
 }

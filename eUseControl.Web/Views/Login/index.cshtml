@@ -25,9 +25,9 @@
                 <img src="/Images/Login/tw.png">
                 <img src="/Images/Login/gp.png">
             </div>
-            <form id="login" class="input-group">
-                <input type="text" class="input-field" placeholder="Name" required>
-                <input type="text" class="input-field" placeholder="Enter Password" required>
+            <form id="login" class="input-group" method="post" action="@Url.Action("Index", "Login")">
+                <input type="text" class="input-field" placeholder="Name" name="Credential" required>
+                <input type="password" class="input-field" placeholder="Enter Password" name="Password" required>
                 <input type="checkbox" class="chech-box"><span>Memorează parola</span>
                 <button type="submit" class="submit-btn">Autorizare</button>
             </form>
