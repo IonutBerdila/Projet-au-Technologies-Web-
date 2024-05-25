@@ -21,7 +21,7 @@ namespace eUseControl.Web.Controllers
         }
 
         // GET: Login
-        public ActionResult Index()
+        /*public ActionResult Index()
         {
             var uLoginData = new ULoginData
             {
@@ -33,6 +33,14 @@ namespace eUseControl.Web.Controllers
             var test = _session.UserLoginAction(uLoginData);
 
             return View();
+        }*/
+
+        public ActionResult Index()
+        {
+            string userRole = "User";
+            HttpContext.Session["UserRole"] = userRole;
+
+            return RedirectToAction("Index", "Home");
         }
 
 
