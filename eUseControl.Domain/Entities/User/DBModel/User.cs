@@ -27,5 +27,11 @@ namespace eUseControl.Domain.Entities.User.DBModel
         public string Password { get; set; }
 
         public UserRole Level { get; set; }
+
+        [StringLength(15)]
+        public string PrivateIp { get; set; }
+
+        [DataType(DataType.Date)]
+        public Nullable<DateTime> LastLogin { get; set; }
     }
 }

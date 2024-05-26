@@ -1,6 +1,7 @@
 ﻿using eUseControl.BuisnessLogic.Interfaces;
 using eUseControl.Domain.Entities.Response;
 using eUseControl.Domain.Entities.User;
+using eUseControl.Web.Attributes;
 using eUseControl.Web.Models.User;
 using System;
 using System.Collections.Generic;
@@ -21,44 +22,56 @@ namespace eUseControl.Web.Controllers
         }
 
         // GET: Login
-        /*public ActionResult Index()
-        {
-            var uLoginData = new ULoginData
-            {
-                Credential = "user",
-                Password = "password",
-                Ip = "",
-                LoginTime = DateTime.Now
-            };
-            var test = _session.UserLoginAction(uLoginData);
-
-            return View();
-        }*/
-
         public ActionResult Index()
         {
-            string userRole = "User";
-            HttpContext.Session["UserRole"] = userRole;
-
-            return RedirectToAction("Index", "Home");
+            return View();
         }
-
 
         //Post: Login
         [HttpPost]
         public ActionResult Index(UserLogin data)
         {
-            var uData = new ULoginData
-            { 
-                Credential = data.Credential,
-                Password = data.Password,
-                Ip = "0.0.0.0",
-                LoginTime = DateTime.Now
-            };
+            if(ModelState.IsValid)
+            {
+                var uData = new ULoginData
+                {
+                    Credential = data.Credential,
+                    Password = data.Password,
+                    Ip = Request.UserHostAddress,
+                    LoginTime = DateTime.Now
+                };
 
-            ULoginResp resp = _session.UserLoginAction(uData);
+                ULoginResp resp = _session.UserLoginAction(uData);
 
-            return View();
+                if(resp.Status)
+                {
+                    // Cookie
+                    HttpCookie cookie = _session.GenCookie(data.Credential);
+                    ControllerContext.HttpContext.Response.Cookies.Add(cookie);
+
+                    var profile = _session.GetUserByCookie(cookie.Value);
+                    if (profile != null)
+                    {
+                        if (profile.Level == Domain.Enums.UserRole.Admin)
+                        {
+                            return RedirectToAction("Index", "Menu");
+                        }
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "User profile not found.");
+                        return View(data);
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", resp.StatusMsg);
+                    return View(data);
+                }
+            }
+
+            return View(data);
         }
     }
 }

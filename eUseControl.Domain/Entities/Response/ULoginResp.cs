@@ -10,6 +10,7 @@ namespace eUseControl.Domain.Entities.Response
     {
         public string ActionStatusMsg { get; set; }
         public bool Status {  get; set; }
+        public string StatusMsg { get; set; }
         public User.DBModel.User CurrentUser { get; set; }
     }
 }

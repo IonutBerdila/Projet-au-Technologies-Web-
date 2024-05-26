@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace eUseControl.BuisnessLogic.Interfaces
 {
@@ -13,5 +14,7 @@ namespace eUseControl.BuisnessLogic.Interfaces
     {
         URegisterResp RegisterNewUserAction(URegisterData regData);
         ULoginResp UserLoginAction(ULoginData data);
+        HttpCookie GenCookie(string data);
+        UProfileData GetUserByCookie(string apiCookieValue);
     }
 }

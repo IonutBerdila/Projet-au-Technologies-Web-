@@ -171,6 +171,7 @@
     </Compile>
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\User\UserLogin.cs" />
+    <Compile Include="Models\User\UserRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
