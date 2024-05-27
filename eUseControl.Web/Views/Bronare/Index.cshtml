@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reservation Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/Content/reserv.css">
+</head>
+<body>
+
+    <section class="banner">
+        <h2>Bronează masa acum</h2>
+        <div class="card-container">
+            <div class="card-img">
+                <!-- image here -->
+            </div>
+
+            <div class="card-content">
+                <h3>Bronare</h3>
+                <form>
+                    <div class="form-row">
+                        <select name="days">
+                            <option value="day-select">Alege ziua</option>
+                            <option value="sunday">Luni</option>
+                            <option value="monday">Marți</option>
+                            <option value="tuesday">Miercuri</option>
+                            <option value="wednesday">Joi</option>
+                            <option value="thursday">Vineri</option>
+                            <option value="friday">Sâmbătă</option>
+                            <option value="saturday">Duminică</option>
+                        </select>
+
+                        <select name="hours">
+                            <option value="hour-select">Alege ora</option>
+                            <option value="10">10: 00</option>
+                            <option value="10">12: 00</option>
+                            <option value="10">14: 00</option>
+                            <option value="10">16: 00</option>
+                            <option value="10">18: 00</option>
+                            <option value="10">20: 00</option>
+                            <option value="10">22: 00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" placeholder="Nume Prenume">
+                        <input type="text" placeholder="Numărul de telefon">
+                    </div>
+
+                    <div class="form-row">
+                        <input type="number" placeholder="Nr. de persoane?" min="1">
+                        <input type="submit" value="Bronare">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

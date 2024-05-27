@@ -1,4 +1,4 @@
-/* General styling */
+﻿/* General styling */
 body {
     background-image: url("/Images/Register/bg.png");
     background-size: cover;
@@ -11,7 +11,7 @@ body {
     align-items: center;
 }
 
-.hero {
+.account-pages {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@ body {
 }
 
 /* Card styling */
-.form-box {
+.card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -28,7 +28,7 @@ body {
     max-width: 400px;
 }
 
-.header {
+.card-body {
     padding: 40px;
 }
 
@@ -49,11 +49,11 @@ p {
 }
 
 /* Form styling */
-.input-group {
+.form-group {
     margin-bottom: 20px;
 }
 
-.input-field {
+.form-control {
     border-radius: 8px;
     border: 1px solid #ced4da;
     padding: 12px;
@@ -64,14 +64,14 @@ p {
     transition: border-color 0.2s;
 }
 
-    .input-field:focus {
+    .form-control:focus {
         border-color: #FF5733;
         outline: none;
         box-shadow: 0 0 5px rgba(255, 87, 51, 0.2);
     }
 
 /* Button styling */
-.submit-btn {
+.btn-primary {
     background: linear-gradient(to right, #FF5733, #FFBD33);
     border: none;
     color: white;
@@ -83,6 +83,6 @@ p {
     width: 100%;
 }
 
-    .submit-btn:hover {
+    .btn-primary:hover {
         background: linear-gradient(to right, #FFBD33, #FF5733);
     }

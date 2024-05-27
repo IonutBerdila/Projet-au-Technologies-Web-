@@ -19,9 +19,9 @@ namespace eUseControl.BuisnessLogic.MainBL
             return RLoginUpService(data);
         }
 
-        public URegisterResp RegisterNewUserAction(URegisterData regData)
+        public URegisterResp UserRegister(URegisterData data)
         {
-            return RegisterUserAction(regData);
+            return UserRegisterAction(data);
         }
 
         public HttpCookie GenCookie(string data)

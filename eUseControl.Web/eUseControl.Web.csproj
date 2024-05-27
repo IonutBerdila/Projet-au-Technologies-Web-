@@ -122,11 +122,29 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\cart.css" />
+    <Content Include="Content\cart.js" />
+    <Content Include="Content\feedback.css" />
     <Content Include="Content\lStyle.css" />
+    <Content Include="Content\reserv.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\stylelogin.css" />
     <Content Include="Content\stylemenu.css" />
+    <Content Include="Content\styleregister.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Bronare\bg.png" />
+    <Content Include="Images\Bronare\card.png" />
+    <Content Include="Images\1.PNG" />
+    <Content Include="Images\2.PNG" />
+    <Content Include="Images\3.PNG" />
+    <Content Include="Images\4.PNG" />
+    <Content Include="Images\5.PNG" />
+    <Content Include="Images\6.PNG" />
+    <Content Include="Images\Cart\shopping.svg" />
+    <Content Include="Images\Feedback\bg.png" />
+    <Content Include="Images\Feedback\pic1.jpg" />
+    <Content Include="Images\Feedback\pic2.jpeg" />
+    <Content Include="Images\Feedback\pic3.jpg" />
     <Content Include="Images\Home\1.png" />
     <Content Include="Images\Home\2.png" />
     <Content Include="Images\Home\3.png" />
@@ -150,6 +168,7 @@
     <Content Include="Images\Menu\shape-6.png" />
     <Content Include="Images\Home\phone.png" />
     <Content Include="Images\Home\pizza.png" />
+    <Content Include="Images\Register\bg.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -160,8 +179,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\BundleConfig2.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\AdminModeAttribute.cs" />
+    <Compile Include="Controllers\BronareController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
@@ -207,6 +231,10 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Menu\Error.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Bronare\Index.cshtml" />
+    <Content Include="Views\Feedback\Index.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -216,6 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eUseControl.BuisnessLogic\eUseControl.BuisnessLogic.csproj">

@@ -12,7 +12,7 @@ namespace eUseControl.BuisnessLogic.Interfaces
 {
     public interface ISession
     {
-        URegisterResp RegisterNewUserAction(URegisterData regData);
+        URegisterResp UserRegister(URegisterData data);
         ULoginResp UserLoginAction(ULoginData data);
         HttpCookie GenCookie(string data);
         UProfileData GetUserByCookie(string apiCookieValue);

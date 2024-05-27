@@ -1,63 +1,38 @@
-﻿
-@{
+﻿@{
     Layout = null;
     ViewBag.Title = "Login";
 }
 
 @model eUseControl.Web.Models.User.UserLogin
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Login Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Gustos - Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="~/Content/stylelogin.css">
-
 </head>
 <body>
     <div class="hero">
         <div class="form-box">
-            <div class="button-box">
-                <div id="btn"></div>
-                <button type="button" class="toggle-btn" onclick="login()"> Log In </button>
-                <button type="button" class="toggle-btn" onclick="register()">Register </button>
+            <div class="header">
+                <h1>La Gustos</h1>
+                <p>Autentificați-vă pentru a accesa contul</p>
             </div>
-            <div class="social-icons">
-                <img src="/Images/Login/fb.png">
-                <img src="/Images/Login/tw.png">
-                <img src="/Images/Login/gp.png">
-            </div>
-            <form id="login" class="input-group" method="post" action="@Url.Action("Index", "Login")">
-                <input type="text" class="input-field" placeholder="Name" name="Credential" required>
-                <input type="password" class="input-field" placeholder="Enter Password" name="Password" required>
-                <input type="checkbox" class="chech-box"><span>Memorează parola</span>
+            <form id="login" class="input-group" method="post" action="@Url.Action("Index", "Menu")">
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="input-field" placeholder="Introduceți numele" name="Credential" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" class="input-field" placeholder="Introduceți parola" name="Password" required>
+                </div>
                 <button type="submit" class="submit-btn">Autorizare</button>
-            </form>
-            <form id="register" class="input-group">
-                <input type="text" class="input-field" placeholder="Name" required>
-                <input type="email" class="input-field" placeholder="Email" required>
-                <input type="text" class="input-field" placeholder="Enter Password" required>
-                <input type="checkbox" class="chech-box"><span>Sunt de acord cu termenii și condițiile</span>
-                <button type="submit" class="submit-btn">Înregistrare</button>
             </form>
         </div>
     </div>
-    <script>
-        var x = document.getElementById("login");
-        var y = document.getElementById("register");
-        var z = document.getElementById("btn");
-
-        function register() {
-            x.style.left = "-400px";
-            y.style.left = "50px";
-            z.style.left = "110px";
-        }
-        function login() {
-            x.style.left = "50px";
-            y.style.left = "450px";
-            z.style.left = "0px";
-        }
-    </script>
-
-
-
 </body>
 </html>

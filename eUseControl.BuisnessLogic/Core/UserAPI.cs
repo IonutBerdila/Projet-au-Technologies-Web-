@@ -47,25 +47,32 @@ namespace eUseControl.BuisnessLogic.Core
             }
             return new ULoginResp { Status = true };
         }
-        internal URegisterResp RegisterUserAction(URegisterData regData)
+        internal URegisterResp UserRegisterAction(URegisterData data)
         {
-            var newUser = new User
+            User insert = new User
             {
-                Name = regData.Name,
-                Email = regData.Email,
-                Password = regData.Password,
-                Level = UserRole.User
+                Name = data.Name,
+                Email = data.Email,
+                Password = LoginHelper.HashGen(data.Password),
+                Level = UserRole.User,
+                RegisterDate = DateTime.Now,
+                UpdateRegisterDate = DateTime.Now
             };
-
+            int result;
             using (var db = new UserContext())
             {
-                db.User.Add(newUser);
-                db.SaveChanges();
+                _ = db.User.Add(insert);
+                result = db.SaveChanges();
             }
-
-
-
-            return new URegisterResp();
+            if (result == 0)
+            {
+                return new URegisterResp
+                {
+                    Status = false,
+                    StatusMsg = "Datele nu au putut fi salvate."
+                };
+            }
+            return new URegisterResp { Status = true };
         }
 
         internal HttpCookie Cookie(string Credential)

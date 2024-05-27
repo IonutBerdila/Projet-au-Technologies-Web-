@@ -7,7 +7,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
+using System.Xml.Linq;
 
 namespace eUseControl.Web.Controllers
 {
@@ -21,7 +23,7 @@ namespace eUseControl.Web.Controllers
         }
 
         // GET: Register
-        public ActionResult Index()
+        /*public ActionResult Index()
         {
             var regData = new URegisterData
             {
@@ -33,6 +35,36 @@ namespace eUseControl.Web.Controllers
             URegisterResp resp = _session.RegisterNewUserAction(regData);
 
             return View();
+        }*/
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(UserRegister register)
+        {
+            if (ModelState.IsValid)
+            {
+                URegisterData data = new URegisterData
+                {
+                    Name = register.Name,
+                    Email = register.Email,
+                    Password = register.Password
+                };
+                var userRegister = _session.UserRegister(data);
+                if (userRegister.Status)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("", userRegister.StatusMsg);
+                    return View(register);
+                }
+            }
+
+            return View(register);
         }
     }
 }

@@ -1,4 +1,95 @@
-﻿
+﻿@using System.Web.Optimization
+
+@model UserRegister
 @{
+    ViewBag.Title = "Register";
     Layout = null;
 }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/styleregister.css">
+</head>
+<body>
+    <div class="account-pages">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="card">
+
+                        <div class="card-body">
+
+                            <div class="text-center w-75 m-auto">
+                                <a href="/">
+                                    <span class="logo-text">La Gustos</span>
+                                </a>
+                                <p class="text-muted mb-4 mt-3">Nu aveți cont? Creează-ți propriul cont, durează mai puțin de un minut</p>
+                            </div>
+                            <script>
+                                function onSuccess() {
+                                    alert("Inregistrare cu succes");
+                                }
+                                function onFailure() {
+                                    alert("Inregistrarea a eșuat");
+                                }
+                            </script>
+
+                            @using (Ajax.BeginForm("Index", "Register", null, new AjaxOptions
+                            {
+                                HttpMethod = "POST",
+                                UpdateTargetId = "register-form",
+                                OnSuccess = "onSuccess",
+                                OnFailure = "onFailure"
+                            }, new { id = "register-form" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true)
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.Name)
+                                    @Html.TextBoxFor(x => x.Name, new
+                                    {
+                                        @class = "form-control",
+                                        placeholder = "Introduceți numele",
+                                        id = "",
+                                        name = "name"
+                                    })
+                                    @Html.ValidationMessageFor(x => x.Name)
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.Email)
+                                    @Html.TextBoxFor(x => x.Email, new
+                                    {
+                                        @class = "form-control",
+                                        placeholder = "Introduceți adresa de email",
+                                        id = "",
+                                        name = "email"
+                                    })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.Password)
+                                    @Html.TextBoxFor(x => x.Password, new
+                                    {
+                                        @class = "form-control",
+                                        placeholder = "Introduceți parola",
+                                        id = "",
+                                        name = "password",
+                                        type = "password"
+                                    })
+                                </div>
+
+                                <div class="form-group mb-0 text-center">
+                                    <button class="btn btn-primary btn-block" type="submit"> Înregistrare </button>
+                                </div>
+                            }
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card -->
+                </div> <!-- end col -->
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </div> <!-- end account-pages -->
+</body>
+</html>
