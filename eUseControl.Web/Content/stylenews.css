@@ -1,0 +1,132 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    background-image: url('/Images/bg.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    background-color: rgba(17, 17, 17, 0.8);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+    header h1 {
+        color: rgba(255, 102, 0);
+        margin: 0;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+
+    header p {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+        color: #f3f3f3;
+    }
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-item {
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .news-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .news-item img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+.news-info h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+}
+
+.news-info p {
+    font-size: 1em;
+    color: #dcdcdc;
+}
+
+.news-info .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 102, 0, 0.8);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .news-info .read-more:hover {
+        background-color: rgba(229, 93, 0, 0.8);
+    }
+
+footer {
+    background-color: rgba(17, 17, 17, 0.8);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+    footer p {
+        margin: 0;
+        font-size: 1em;
+        color: #bbbbbb;
+    }
+
+.news-item img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+}

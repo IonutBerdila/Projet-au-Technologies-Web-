@@ -1,0 +1,86 @@
+﻿@using System.Web.Optimization
+@model eUseControl.Web.Models.Career
+
+@{
+    Layout = null;
+    ViewBag.Title = "Cariera";
+}
+
+<link href="~/Content/stylecareer.css" rel="stylesheet" />
+
+<div class="container">
+    <h2>Carieră La Gustos</h2>
+
+    @using (Html.BeginForm("Submit", "Career", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <div>
+            <div>
+                @Html.LabelFor(m => m.FullName)
+                @Html.TextBoxFor(m => m.FullName)
+                @Html.ValidationMessageFor(m => m.FullName, null, new { @class = "validation-error" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Age)
+                @Html.TextBoxFor(m => m.Age)
+                @Html.ValidationMessageFor(m => m.Age, null, new { @class = "validation-error" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Phone)
+                @Html.TextBoxFor(m => m.Phone)
+                @Html.ValidationMessageFor(m => m.Phone, null, new { @class = "validation-error" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email, null, new { @class = "validation-error" })
+            </div>
+            <div>
+                <label>Locuri de muncă restaurant:</label>
+                <div class="radio-group">
+                    @Html.RadioButtonFor(m => m.RestaurantJob, "Administrator") <label>Administrator</label>
+                    @Html.RadioButtonFor(m => m.RestaurantJob, "Chelner") <label>Chelner</label>
+                    @Html.RadioButtonFor(m => m.RestaurantJob, "Handyman") <label>Handyman</label>
+                </div>
+            </div>
+            <div>
+                <label>Locuri de muncă din fabrică:</label>
+                <div class="radio-group">
+                    @Html.RadioButtonFor(m => m.FactoryJob, "Bucătar") <label>Bucătar</label>
+                    @Html.RadioButtonFor(m => m.FactoryJob, "Casier Operator") <label>Casier Operator</label>
+                    @Html.RadioButtonFor(m => m.FactoryJob, "Specialist în deserturi") <label>Specialist în deserturi</label>
+                    @Html.RadioButtonFor(m => m.FactoryJob, "Șofer de livrare") <label>Șofer de livrare</label>
+                </div>
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Languages)
+                @Html.TextBoxFor(m => m.Languages)
+                @Html.ValidationMessageFor(m => m.Languages, null, new { @class = "validation-error" })
+            </div>
+            <div>
+                <label>Sunt dispus să lucrez:</label>
+                <div class="radio-group">
+                    @Html.RadioButtonFor(m => m.WorkType, "Cu normă întreagă") <label>Cu normă întreagă</label>
+                    @Html.RadioButtonFor(m => m.WorkType, "Part-time") <label>Part-time</label>
+                </div>
+            </div>
+            <div>
+                <label>În care rețea de restaurante?</label>
+                <div class="radio-group">
+                    @Html.RadioButtonFor(m => m.RestaurantNetwork, "La Gustos Ciocana") <label>La Gustos Ciocana</label>
+                    @Html.RadioButtonFor(m => m.RestaurantNetwork, "La Gustos Centru") <label>La Gustos Centru</label>
+                    @Html.RadioButtonFor(m => m.RestaurantNetwork, "La Gustos Rîșcani") <label>La Gustos Rîșcani</label>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Trimite" />
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+}

@@ -128,6 +128,8 @@
     <Content Include="Content\lStyle.css" />
     <Content Include="Content\reserv.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\stylecareer.css" />
+    <Content Include="Content\styleevents.css" />
     <Content Include="Content\stylelogin.css" />
     <Content Include="Content\stylemenu.css" />
     <Content Include="Content\styleregister.css" />
@@ -141,6 +143,9 @@
     <Content Include="Images\5.PNG" />
     <Content Include="Images\6.PNG" />
     <Content Include="Images\Cart\shopping.svg" />
+    <Content Include="Images\Events\event1.jpg" />
+    <Content Include="Images\Events\event2.jpeg" />
+    <Content Include="Images\Events\event3.jpg" />
     <Content Include="Images\Feedback\bg.png" />
     <Content Include="Images\Feedback\pic1.jpg" />
     <Content Include="Images\Feedback\pic2.jpeg" />
@@ -168,6 +173,11 @@
     <Content Include="Images\Menu\shape-6.png" />
     <Content Include="Images\Home\phone.png" />
     <Content Include="Images\Home\pizza.png" />
+    <Content Include="Images\News\aniversare.png" />
+    <Content Include="Images\News\degustare.jpg" />
+    <Content Include="Images\News\desert.jpg" />
+    <Content Include="Images\News\meniu-sezonier.jpeg" />
+    <Content Include="Images\News\program-de-lucru.jpg" />
     <Content Include="Images\Register\bg.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -175,6 +185,16 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -183,16 +203,21 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\AdminModeAttribute.cs" />
+    <Content Include="Content\stylenews.css" />
     <Compile Include="Controllers\BronareController.cs" />
+    <Compile Include="Controllers\CareerController.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Career.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\User\UserLogin.cs" />
     <Compile Include="Models\User\UserRegister.cs" />
@@ -235,6 +260,10 @@
     <Content Include="Views\Bronare\Index.cshtml" />
     <Content Include="Views\Feedback\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Career\Index.cshtml" />
+    <Content Include="Views\Career\ThankYou.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

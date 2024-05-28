@@ -1,0 +1,114 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    background-image: url('/Images/bg.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    background-color: rgba(17, 17, 17, 0.8);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+    header h1 {
+        color: rgba(255, 102, 0);
+        margin: 0;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+
+    header p {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+        color: #f3f3f3;
+    }
+
+main {
+    padding: 40px 20px;
+}
+
+.events {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event {
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .event:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .event img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .event h2 {
+        margin: 20px 0 10px;
+        font-size: 1.5em;
+    }
+
+    .event p {
+        font-size: 1em;
+        color: #dcdcdc;
+    }
+
+footer {
+    background-color: rgba(17, 17, 17, 0.8);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+    footer p {
+        margin: 0;
+        font-size: 1em;
+        color: #bbbbbb;
+    }
+
+.contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255, 102, 0, 0.8);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .contact-button:hover {
+        background-color: rgba(229, 93, 0, 0.8);
+    }

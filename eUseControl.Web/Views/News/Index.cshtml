@@ -1,0 +1,81 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "News";
+}
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Gustos - Noutăți</title>
+    <link rel="stylesheet" href="~/Content/stylenews.css">
+    <style>
+        .news-item img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>La Gustos</h1>
+            <p>Restaurantul tău preferat</p>
+        </header>
+        <main>
+            <section class="news">
+                <div class="news-item">
+                    <img src="~/Images/News/program-de-lucru.jpg" alt="Orar de lucru">
+                    <div class="news-info">
+                        <h3>Orarul de lucru</h3>
+                        <p class="date">02.05.2024</p>
+                        <p>Orarul de lucru în zilele de sărbătoare.</p>
+                        <a href="#" class="read-more">Mai mult</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="~/Images/News/meniu-sezonier.jpeg" alt="Meniul verii">
+                    <div class="news-info">
+                        <h3>Vară delicioasă cu noul meniu La Gustos</h3>
+                        <p class="date">10.08.2023</p>
+                        <p>Începând cu 10 august, restaurantul La Gustos lansează noul meniu sezonier.</p>
+                        <a href="#" class="read-more">Mai mult</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="~/Images/News/aniversare.png" alt="Petrecere aniversară">
+                    <div class="news-info">
+                        <h3>La Gustos Birthday Party - 24 ani împreună</h3>
+                        <p class="date">26.08.2023</p>
+                        <p>Celebrăm cea de-a 24-a aniversare a restaurantului nostru. Vă așteptăm cu surprize!</p>
+                        <a href="#" class="read-more">Mai mult</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="~/Images/News/desert.jpg" alt="Noutate 1">
+                    <div class="news-info">
+                        <h3>Lansarea unui nou desert</h3>
+                        <p class="date">01.01.2024</p>
+                        <p>Am adăugat un nou desert în meniul nostru - Tiramisu cu ciocolată albă și fructe de pădure. Vino să-l încerci!</p>
+                        <a href="#" class="read-more">Mai mult</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="~/Images/News/degustare.jpg" alt="Noutate 2">
+                    <div class="news-info">
+                        <h3>Degustare de vinuri</h3>
+                        <p class="date">02.02.2024</p>
+                        <p>Organizăm o seară de degustare de vinuri locale. Vă așteptăm cu cele mai bune vinuri din regiune și aperitive delicioase.</p>
+                        <a href="#" class="read-more">Mai mult</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 La Gustos. Toate drepturile rezervate.</p>
+        </footer>
+    </div>
+</body>
+</html>
